@@ -84,7 +84,7 @@
     NSString *character = @",";
     NSArray *keys = [self trimComponents:[[rows objectAtIndex:0] componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:character]] withCharacters:trimStr];
     
-    for (int i = 1; i < rows.count-1; i++) {
+    for (int i = 1; i < rows.count; i++) {
         NSArray *objects = [self trimComponents:[[rows objectAtIndex:i] componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:character]]
                                  withCharacters:trimStr];
         [self.arrayCSV addObject:[NSDictionary dictionaryWithObjects:objects forKeys:keys]];
